@@ -43,6 +43,11 @@ function App() {
 				<Route component={Logout} exact path="/logout" />
 				<PrivateRoute component={Admin} path="/admin" />
 			</Router>
+			<p>
+				<a href="https://github.com/X-Tender/react-auth" target="_blank" rel="noopener noreferrer">
+					GitHub repo
+				</a>
+			</p>
 		</AuthContext.Provider>
 	);
 }
