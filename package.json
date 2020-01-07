@@ -1,0 +1,68 @@
+{
+	"name": "reactjs-auth",
+	"version": "1.0.0",
+	"description": "A React authentication recipe using hooks and slim Framework for backend",
+	"main": "cfg/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack --config cfg/webpack.config.prod.js",
+		"start": "node .",
+		"start:hidden": "node . --h"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/X-Tender/react-auth.git"
+	},
+	"keywords": [
+		"react",
+		"reactjs",
+		"php",
+		"authentication",
+		"slim"
+	],
+	"author": "Paul Kamma",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/X-Tender/react-auth/issues"
+	},
+	"homepage": "https://github.com/X-Tender/react-auth#readme",
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/plugin-proposal-function-bind": "^7.2.0",
+		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+		"@babel/plugin-proposal-optional-chaining": "^7.2.0",
+		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
+		"@babel/plugin-transform-object-assign": "^7.2.0",
+		"@babel/plugin-transform-react-constant-elements": "^7.5.0",
+		"@babel/preset-env": "^7.7.7",
+		"@babel/preset-react": "^7.0.0",
+		"babel-eslint": "^10.0.2",
+		"babel-loader": "^8.0.6",
+		"browser-sync": "^2.26.7",
+		"clean-webpack-plugin": "^3.0.0",
+		"core-js": "^3.2.1",
+		"eslint": "^6.2.1",
+		"eslint-config-prettier": "^6.9.0",
+		"eslint-friendly-formatter": "^4.0.1",
+		"eslint-loader": "^2.2.1",
+		"eslint-plugin-babel": "^5.3.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react-hooks": "^2.0.1",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"react-hot-loader": "^4.12.11",
+		"regenerator-runtime": "^0.13.3",
+		"webpack": "^4.39.2",
+		"webpack-cli": "^3.3.7",
+		"webpack-dev-middleware": "^3.7.0",
+		"webpack-hot-middleware": "^2.25.0",
+		"webpack-stream": "^5.2.1",
+		"react-delay": "^0.1.0",
+		"react-router-dom": "^5.1.2",
+		"styled-components": "^4.4.0",
+		"prettier": "^1.19.1",
+		"terser-webpack-plugin": "^2.3.1"
+	}
+}

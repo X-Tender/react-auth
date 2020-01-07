@@ -1,0 +1,47 @@
+{
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2019,
+		"ecmaFeatures": {
+			"jsx": false,
+			"spread": true,
+			"classes": true,
+			"experimentalObjectRestSpread": true
+		}
+	},
+	"parser": "babel-eslint",
+	"globals": {
+		"module": true
+	},
+	"plugins": ["babel", "react", "react-hooks"],
+	"env": {
+		"browser": true,
+		"es6": true,
+		"amd": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"eslint-config-prettier",
+		"eslint-config-prettier/react"
+	],
+	"settings": {
+		"react": {
+			"createClass": "createReactClass",
+			"pragma": "React",
+			"version": "detect"
+		},
+		"propWrapperFunctions": ["forbidExtraProps"]
+	},
+	"rules": {
+		"no-console": 0,
+		"no-unused-vars": [
+			1,
+			{
+				"vars": "local",
+				"args": "after-used",
+				"argsIgnorePattern": "(^e$|^event$|^response$|^data$|^res$|^error$)"
+			}
+		]
+	}
+}

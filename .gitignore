@@ -1,0 +1,17 @@
+/*
+!/.*
+!/*.json
+!/*.lock
+!/*.md
+
+!/app
+!/cfg
+/cfg/webpack.vars.local.js
+
+!public/
+public/assets/js
+public/assets/css/*
+!public/assets/css/.gitkeep
+
+!resources/
+!src/
