@@ -18,6 +18,9 @@ React Router: Require Authentication With Singular Component – *Ross Bulat*\
 Implementing private routes with React Router and Hooks – *Ceci García García*\
 [medium.com](https://medium.com/trabe/implementing-private-routes-with-react-router-and-hooks-ed38d0cf93d5)
 
+Protected routes and authentication with React Router v4 – *Tyler McGinnis*\
+[tylermcginnis.com](https://tylermcginnis.com/react-router-protected-routes-authentication/)
+
 ## Example
 http://react-auth.codeplaylove.de/
 ### Test login Data
