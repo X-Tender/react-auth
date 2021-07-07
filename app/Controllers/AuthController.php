@@ -6,10 +6,10 @@ use App\Models\User;
 use Dflydev\FigCookies\FigResponseCookies;
 use Dflydev\FigCookies\SetCookie;
 use Firebase\JWT\JWT;
-use Noodlehaus\Config;
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Router;
+use App\Utils\Config;
+use Slim\Http\Response;
+use Slim\Http\ServerRequest as Request;
+use Slim\Interfaces\RouteParserInterface as Router;
 use Slim\Views\Twig;
 
 class AuthController
@@ -21,7 +21,6 @@ class AuthController
     {
         $this->view   = $view;
         $this->router = $router;
-        $this->config = $config;
     }
 
     public function index(Request $request, Response $response)
@@ -57,8 +56,8 @@ class AuthController
 
     public function logout(Request $request, Response $response)
     {
-        $authCookieName = $this->config->get('jwt.authCookie');
-        $dataCookieName = $this->config->get('jwt.dataCookie');
+        $authCookieName = $_ENV['JWT_AUTH_COOKIE_NAME'];
+        $dataCookieName = $_ENV['JWT_DATA_COOKIE_NAME'];
 
         $authCookie = SetCookie::create($authCookieName)
             ->withValue('')
@@ -93,13 +92,13 @@ class AuthController
             ]);
         }
 
+        // REMOVE PASSWORD CHECK FOR TESTING - BUILD YOUR OWN PW CHECK
         // if ($user->password != $password) {
         //     return $response->withJson([
         //         "error"   => 2,
         //         "message" => "ERROR PASSWORD",
         //     ]);
         // }
-
         $response = $this->setAuthCookie($user, $response, $request);
 
         $responseData = [
@@ -117,10 +116,10 @@ class AuthController
     {
         $now = new \DateTime();
 
-        $key = $this->config->get('jwt.secret');
+        $key = $_ENV['JWT_SECRET'];
 
-        $authCookieName = $this->config->get('jwt.authCookie');
-        $dataCookieName = $this->config->get('jwt.dataCookie');
+        $authCookieName = $_ENV['JWT_AUTH_COOKIE_NAME'];
+        $dataCookieName = $_ENV['JWT_DATA_COOKIE_NAME'];
 
         $authJWT = [
             "iat"  => $now->getTimeStamp(),

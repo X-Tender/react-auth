@@ -1,8 +1,5 @@
 <?php
 
-/* Model Template
-Use it to create new Models */
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
