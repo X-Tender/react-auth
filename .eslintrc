@@ -22,8 +22,7 @@
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
-		"eslint-config-prettier",
-		"eslint-config-prettier/react"
+		"eslint-config-prettier"
 	],
 	"settings": {
 		"react": {
@@ -42,6 +41,7 @@
 				"args": "after-used",
 				"argsIgnorePattern": "(^e$|^event$|^response$|^data$|^res$|^error$)"
 			}
-		]
+		],
+		"react/prop-types": 0
 	}
 }
