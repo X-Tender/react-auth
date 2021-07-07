@@ -1,10 +1,17 @@
 /*
-!/.*
+!/.env*
 !/*.json
 !/*.lock
 !/*.md
+!/*.yaml
+!/*.sh
+!/*.sql.gz
 
+!/.ddev
 !/app
+!/bootstrap
+!/routes
+!/db
 !/cfg
 /cfg/webpack.vars.local.js
 

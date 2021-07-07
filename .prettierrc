@@ -4,6 +4,7 @@
 	"useTabs": true,
 	"singleQuote": true,
 	"trailingComma": "es5",
+	"arrowParens": "avoid",
 	"bracketSpacing": true,
 	"semi": true,
 	"parser": "babel",
@@ -34,6 +35,12 @@
 			"options": {
 				"parser": "json",
 				"printWidth": 30
+			}
+		},
+		{
+			"files": ["*.yaml"],
+			"options": {
+				"parser": "yaml"
 			}
 		}
 	]
