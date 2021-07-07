@@ -75,11 +75,3 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^ index.php [QSA,L]
-
-AuthName "PRIVAT"
-AuthType Basic
-#AuthUserFile oath_to_htpasswd/.htpasswd
-Allow from 80.153.142.48
-require valid-user
-Order allow,deny
-Satisfy any

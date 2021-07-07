@@ -1,7 +1,4 @@
-# Use this file only for development!
-
 Options -Indexes
-Options +FollowSymLinks
 
 RewriteEngine On
 DirectorySlash On
@@ -49,7 +46,7 @@ DirectorySlash On
     </FilesMatch>
 </IfModule>
 
-RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
 
 # no URL rewrite for Assets
 RewriteRule ^(assets)($|/) - [L]
@@ -59,6 +56,8 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.+[^/])/$ $1 [R=301,L]
 RewriteCond %{HTTPS} on
 RewriteRule ^(.+[^/])/$ $1 [R=301,L]
+
+RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 RewriteRule ^(robots\.txt|favicon\.ico) - [PT,L]
 RewriteCond %{REQUEST_FILENAME} !-f
