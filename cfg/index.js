@@ -35,7 +35,6 @@ const webpackDev = webpackDevMiddleware(bundler, {
 		warnings: true,
 		publicPath: false,
 	},
-	quiet: false,
 });
 
 const webpackHot = webpackHotMiddleware(bundler);

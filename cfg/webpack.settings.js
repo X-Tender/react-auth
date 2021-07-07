@@ -7,8 +7,8 @@ const entryWithHMR = entrys => {
 };
 
 const settings = {
-	devHost: 'http://HOST',
-	devPath: '/PATH/public',
+	devHost: 'https://react-auth.dev',
+	devPath: '',
 	entry: {
 		app: entryWithHMR(['./index.jsx']),
 	},
