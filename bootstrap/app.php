@@ -30,7 +30,7 @@ $app = AppFactory::create();
 require_once __DIR__ . '/providers.php';
 require_once __DIR__ . '/middleWares.php';
 require_once __DIR__ . '/errorHandling.php';
-require_once __DIR__ . '/../routes/web.php';
 require_once __DIR__ . '/../routes/api.php';
+require_once __DIR__ . '/../routes/web.php';
 
 $app->run();
