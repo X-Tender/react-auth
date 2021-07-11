@@ -64,5 +64,10 @@
     "webpack-dev-middleware": "^5.0.0",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-stream": "^6.1.2"
+  },
+  "dependencies": {
+    "react-redux": "^7.2.4",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   }
 }
